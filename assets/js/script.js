@@ -3,8 +3,6 @@ let pokename = document.querySelectorAll('.pokename');
 let idnr = document.querySelector('.idnr');
 let ul = document.querySelector('ul');
 
-
-
 fetch('https://pokeapi.co/api/v2/pokemon/charmander')
   .then(response => response.json())
   .then((data) => {
@@ -51,4 +49,55 @@ fetch('https://pokeapi.co/api/v2/pokemon/charmander')
     
   });
 
+  const contentDump = document.querySelector('#pokedex');
+  const searchBtn = document.querySelector('.btn-search');
+  const pokinput = document.querySelector('input');
 
+  // actual behavior
+const SearchPoke = (pokemon) => {
+  contentDump.innerHTML = "";
+  
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    .then(response => response.json())
+    .then((data) => {
+      const pokeCard = `<div id="left-pokedex">
+                          <div class="viewer">
+                              <div class="screen">
+                                  <center><img class="sprite" src="${data.sprites.front_default}" alt=""></center>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div id="right-pokedex">
+                          <p class="pokename">${data.name}</p>
+
+                          <p class="idnr">ID: ${data.id} </p>
+                          <div class="moves">
+                              <ul id="movelist">
+                                  <span class="pokename">${data.name}</span>'s moves:
+                                  <li>${data.moves[0].move.name}</li>
+                                  <li>${data.moves[1].move.name}</li>
+                                  <li>${data.moves[2].move.name}</li>
+                                  <li>${data.moves[3].move.name}</li>
+                              </ul>
+                          </div>
+                      </div>`
+                      console.log(data.sprites.front_default);
+      contentDump.insertAdjacentHTML('beforeend', pokeCard)
+    })
+    .catch(function(response) {
+      // FAILURE RESPONSE
+      console.log('Error! Please try again');
+      pokinput.value = "";
+      b = document.querySelector('body');
+      b.style.transition = "all ease 2s";
+      b.style.transform = "rotate(360deg)";
+      alert('YOU ENTERED A WRONG POKENAME');
+  });
+};
+
+// Entry Point
+searchBtn.addEventListener('click', (event) => {
+  console.log(pokinput.value)
+  SearchPoke(pokinput.value)
+});
