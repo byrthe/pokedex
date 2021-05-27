@@ -1,5 +1,41 @@
 body{
-    margin: 30px;
-    background-color: rgb(241, 40, 40);
+    
     font-family: monospace;
+}
+header{
+    padding:20px;
+    display: flex;
+    flex-flow: column;
+}
+#pokedex{
+    background-color: rgb(241, 40, 40);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.viewer{
+    background-color: rgb(179, 177, 177);
+    width: 500px;
+    padding:30px 20px 40px 20px;
+    border-radius: 20px;
+    margin:20px;
+}
+.screen{
+    background-color: white;
+    border-radius: 20px;
+}
+.sprite{
+    height: 300px;
+    width: auto;
+}
+
+ul{
+    list-style: none;
+    padding:0;
+}
+li{
+    padding-left: 10px;
 }

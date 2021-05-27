@@ -12,12 +12,39 @@
     </head>
 
     <body>
+        
+        <header>
+            <div class="searchbox">
+                <input id="searchInput" type="text" value="New Search?">
+                <button class="btn-search">Search a Pokemon</button>
+            </div>
+        </header>
 
-        <h1>Pokédex</h1>
+        <section id="pokedex">
+            <h1>Pokédex</h1>
+
+            <div id="left-pokedex">
+                <div class="viewer">
+                    <div class="screen">
+                        <center><img class="sprite" src=""></center>
+                    </div>
+                </div>
+            </div>
+
+            <div id="right-pokedex">
+                <p class="pokename">***</p>
+
+                <p class="idnr">ID: </p>
+                <div class="moves">
+                    <ul id="movelist">
+                        <span class="pokename">***</span>'s moves:
+                    </ul>
+                </div>
+            </div>
+        </section>
 
 
-
-
-        <script src="script.js"></script>
+        <script src="assets/js/script.js"></script>
+        
     </body>
 </html>
