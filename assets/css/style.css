@@ -14,29 +14,15 @@ header{
     flex-flow: row wrap;
     align-items: flex-end;
 }
+
+/* left side*/
 #left-pokedex{
     background-color: rgb(241, 40, 40);
     border-radius: 20px;
     height: 500px;
-}
-#right-pokedex{
-    background-color: rgb(241, 40, 40);
-    border-radius: 20px;
-    display:flex;
-    flex-flow: column;
-    align-items: center;
-    width: 400px;
-    height: 350px;
-}
-.idbox{
-    background-color: rgb(11, 44, 36);
-    padding:20px;
-    margin:20px;
-    border-radius: 20px;
-    color:white;
-    font-size: 25px;
-    display: flex;
-    flex-flow: row wrap;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(107, 107, 107);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 10px 0px rgb(107, 107, 107);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 10px 0px rgb(107, 107, 107);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 .lights{
     display: flex;
@@ -90,13 +76,40 @@ header{
 .screen{
     background-color: white;
     border-radius: 20px;
+    height: 300px;
 }
 .sprite{
     height: 300px;
     width: auto;
 }
+/*right side*/
 
+#right-pokedex{
+    background-color: rgb(241, 40, 40);
+    border-radius: 20px;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    width: 400px;
+    height: 350px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(107, 107, 107);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 10px 0px rgb(107, 107, 107);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 10px 0px rgb(107, 107, 107);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.idbox{
+    background-color: rgb(11, 44, 36);
+    padding:20px;
+    margin:20px;
+    border-radius: 20px;
+    color:white;
+    font-size: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 250px;
+}
 ul{
+    height: 125px;
+    width: 250px;
     list-style: none;
     padding:0;
     font-size: 20px;
