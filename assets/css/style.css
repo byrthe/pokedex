@@ -1,6 +1,7 @@
 body{
     background-color: lightblue;
     font-family: monospace;
+    color:white;
 }
 header{
     padding:20px;
@@ -8,17 +9,80 @@ header{
     flex-flow: column;
 }
 #pokedex{
-    background-color: rgb(241, 40, 40);
     margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+#left-pokedex{
+    background-color: rgb(241, 40, 40);
     border-radius: 20px;
+    height: 500px;
+}
+#right-pokedex{
+    background-color: rgb(241, 40, 40);
+    border-radius: 20px;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    width: 400px;
+    height: 350px;
+}
+.idbox{
+    background-color: rgb(11, 44, 36);
+    padding:20px;
+    margin:20px;
+    border-radius: 20px;
+    color:white;
+    font-size: 25px;
     display: flex;
     flex-flow: row wrap;
 }
-
-
+.lights{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 15px;
+}
+.bluebig{
+    background-color: rgb(89, 216, 255);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: 5px solid white;
+}
+.smalllights{
+    display: flex;
+    flex-flow:row wrap;
+}
+.red{
+    background-color: red;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    border: 1px solid rgb(49, 49, 49);
+}
+.yellow{
+    background-color: yellow;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    border: 1px solid rgb(49, 49, 49);
+}
+.green{
+    background-color: greenyellow;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    border: 1px solid rgb(49, 49, 49);
+}
 .viewer{
     background-color: rgb(179, 177, 177);
-    width: 500px;
+    width: 400px;
     padding:30px 20px 40px 20px;
     border-radius: 20px;
     margin:20px;
@@ -35,7 +99,12 @@ header{
 ul{
     list-style: none;
     padding:0;
+    font-size: 20px;
+    background-color: rgb(89, 216, 255);
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
 }
 li{
-    padding-left: 10px;
+    
 }
